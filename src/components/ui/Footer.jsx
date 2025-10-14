@@ -11,7 +11,7 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                 </svg>
               </div>
-              <span className="text-xl font-bold text-gray-900">lptrips</span>
+              <span className="text-xl font-bold text-gray-900">LPTrips</span>
             </div>
             <p className="text-gray-600 text-sm leading-relaxed">
               Revolucionando la forma en que el mundo viaja con inteligencia artificial.
@@ -46,7 +46,7 @@ export default function Footer() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                hola@lptrips.com
+                hola@LPTrips.com
               </li>
               <li className="flex items-center gap-2 hover:text-blue-600 transition-colors cursor-pointer">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -60,7 +60,7 @@ export default function Footer() {
         
         {/* Bottom */}
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">
-          <p>&copy; 2024 lptrips. Todos los derechos reservados.</p>
+          <p>&copy; 2024 LPTrips. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
