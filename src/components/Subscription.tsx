@@ -1,6 +1,6 @@
 export default function Subscription() {
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+    <section className="py-20 bg-customGray">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6">
