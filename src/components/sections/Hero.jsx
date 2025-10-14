@@ -1,31 +1,96 @@
+import { useState, useEffect } from 'react';
+
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const imageSets = [
+    {
+      desktop: '/images/img_a.webp',
+      tablet: '/images/img_a.webp', 
+      mobile: '/images/img_a.webp'
+    },
+    {
+      desktop: '/images/img_b.webp',
+      tablet: '/images/img_b.webp',
+      mobile: '/images/img_b.webp'
+    },
+    {
+      desktop: '/images/img_c.webp',
+      tablet: '/images/img_c.webp',
+      mobile: '/images/img_c.webp'
+    },
+    {
+      desktop: '/images/img_d.webp',
+      tablet: '/images/img_d.webp',
+      mobile: '/images/img_d.webp'
+    },
+    {
+      desktop: '/images/img_e.webp',
+      tablet: '/images/img_e.webp',
+      mobile: '/images/img_e.webp'
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === imageSets.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-white">
-
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        {/* Overlay muy ligero para mejor legibilidad */}
-        <div className="absolute inset-0 bg-white/20 z-10"></div>
+      {/* Background Images Carrusel*/}
+      <div className="absolute inset-0 z-0 mx-12 my-20 rounded-3xl overflow-hidden"> 
+        {/* Overlay muy ligero */}
+        <div className="absolute inset-0 bg-white/15 z-20"></div>
         
-        {/* Imagen de fondo */}
-        <div 
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url("/images/trave.jpg")'
-          }}
-        />
+        {/* Imágenes del carrusel*/}
+        {imageSets.map((imageSet, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <picture>
+              <source 
+                media="(min-width: 992px)" 
+                srcSet={`${imageSet.desktop} 1x, ${imageSet.desktop} 2x`}
+              />
+              <source 
+                media="(min-width: 744px)" 
+                srcSet={`${imageSet.tablet} 1x, ${imageSet.tablet} 2x`}
+              />
+              <source 
+                media="(min-width: 0px)" 
+                srcSet={`${imageSet.mobile} 1x, ${imageSet.mobile} 2x`}
+              />
+              <img
+                src={imageSet.desktop}
+                alt="Destino de viaje"
+                className="w-full h-full object-cover object-center"
+                loading="eager"
+                decoding="async"
+                sizes="100vw"
+              />
+            </picture>
+          </div>
+        ))}
         
-        {/* Gradiente sutil para realzar la imagen */}
+        {/* Gradiente sutil */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/10 via-transparent to-purple-50/10 z-10"></div>
         
-        {/* Elementos decorativos sutiles */}
+        {/* Elementos decorativos */}
         <div className="absolute top-20 right-20 w-80 h-80 bg-blue-200/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-200/5 rounded-full blur-3xl"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-6 relative z-20 pb-6">
-
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge con mejor contraste */}
           <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-md border border-white/30 rounded-full px-4 py-2 mb-12 shadow-lg">
@@ -80,8 +145,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Features Grid con mejor diseño */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-4"> {/* Cambiado de mb-16 a mb-8 */}
+          {/* Features Grid*/}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto mb-4">
             {[
               {
                 title: "Precios precisos",
@@ -97,7 +162,7 @@ export default function Hero() {
               }
             ].map((feature, index) => (
               <div key={index} className="bg-white/95 backdrop-blur-md border border-white/30 rounded-xl p-6 text-center hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                {/* Iconos SVG mejorados */}
+                {/* Iconos SVG */}
                 <div className="flex justify-center mb-4">
                   {index === 0 && (
                     <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -123,7 +188,7 @@ export default function Hero() {
           </div>
 
           {/* Trust Badge */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8"> {/* Añadido mt-8 */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8">
             {/* Primer badge - usuarios */}
             <div className="flex items-center gap-3 bg-white/95 backdrop-blur-md px-5 py-3 sm:px-6 sm:py-3 rounded-full shadow-xl border border-white/30 w-full sm:w-auto justify-center transform hover:scale-105 transition-transform">
               <div className="flex -space-x-2 flex-shrink-0">
