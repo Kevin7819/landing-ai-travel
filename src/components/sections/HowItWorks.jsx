@@ -21,10 +21,10 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50/30">
+    <section id="how-it-works" className="py-20 bg-custom-gray from-slate-50 to-blue-50/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-blue-100 rounded-full px-6 py-3 mb-8 shadow-sm">
+          <div className="inline-flex items-center gap-3 bg-custom-gray backdrop-blur-sm border border-blue-100 rounded-full px-6 py-3 mb-8 shadow-sm">
             <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
             <span className="text-gray-700 font-semibold text-sm tracking-wide">PROCESO INTELIGENTE</span>
           </div>
@@ -55,7 +55,7 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Contenido */}
-                <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/50 group-hover:shadow-2xl group-hover:border-blue-100 transition-all duration-500">
+                <div className="bg-custom-gray backdrop-blur-sm rounded-3xl p-8 shadow-lg border bg-custom-gray group-hover:shadow-2xl group-hover:border-blue-100 transition-all duration-500">
                   <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors">
                     {step.title}
                   </h3>
@@ -69,7 +69,7 @@ export default function HowItWorks() {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-white/90 backdrop-blur-md rounded-3xl p-12 text-center shadow-2xl border border-white/50">
+        <div className="bg-custom-gray backdrop-blur-md rounded-3xl p-12 text-center shadow-2xl border bg-custom-gray">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center items-center mb-8">
               <div className="relative">

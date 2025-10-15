@@ -1,4 +1,3 @@
-// src/utils/seoConfig.ts
 export const seoConfig = {
   title: "IA Travel - Búsqueda Inteligente de Precios de Viaje",
   description:
