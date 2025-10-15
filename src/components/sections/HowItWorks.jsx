@@ -21,33 +21,33 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-custom-gray from-slate-50 to-blue-50/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center gap-3 bg-custom-gray backdrop-blur-sm border border-blue-100 rounded-full px-6 py-3 mb-8 shadow-sm">
-            <div className="w-3 h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
-            <span className="text-gray-700 font-semibold text-sm tracking-wide">PROCESO INTELIGENTE</span>
+    <section id="how-it-works" className="py-12 sm:py-16 md:py-20 bg-custom-gray from-slate-50 to-blue-50/30">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <div className="inline-flex items-center gap-2 sm:gap-3 bg-custom-gray backdrop-blur-sm border border-blue-100 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-sm">
+            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
+            <span className="text-gray-700 font-semibold text-xs sm:text-sm tracking-wide">PROCESO INTELIGENTE</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
             Cómo funciona
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light px-4">
             Un proceso diseñado para maximizar tus ahorros con tecnología de punta
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20 relative">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20 relative">
           <div className="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
-          
+
           {steps.map((step, index) => (
             <div key={index} className="relative group">
               <div className="text-center">
                 {/* Número con icono */}
-                <div className="relative mb-8">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-500 via-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto shadow-xl shadow-blue-500/25 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-purple-500/30 transition-all duration-500">
+                <div className="relative mb-6 sm:mb-8">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-500 via-purple-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto shadow-xl shadow-blue-500/25 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-purple-500/30 transition-all duration-500">
                     <div className="text-center">
-                      <div className="text-3xl font-black mb-1">{step.number}</div>
-                      <svg className="w-6 h-6 text-white/80 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div className="text-2xl sm:text-3xl font-black mb-1">{step.number}</div>
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white/80 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={step.icon} />
                       </svg>
                     </div>
@@ -55,11 +55,11 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Contenido */}
-                <div className="bg-custom-gray backdrop-blur-sm rounded-3xl p-8 shadow-lg border bg-custom-gray group-hover:shadow-2xl group-hover:border-blue-100 transition-all duration-500">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:text-blue-600 transition-colors">
+                <div className="bg-custom-gray backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border bg-custom-gray group-hover:shadow-2xl group-hover:border-blue-100 transition-all duration-500">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-gray-900 group-hover:text-blue-600 transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-lg font-light">
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg font-light">
                     {step.description}
                   </p>
                 </div>
@@ -69,21 +69,21 @@ export default function HowItWorks() {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-custom-gray backdrop-blur-md rounded-3xl p-12 text-center shadow-2xl border bg-custom-gray">
+        <div className="bg-custom-gray backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-center shadow-2xl border bg-custom-gray">
           <div className="max-w-4xl mx-auto">
-            <div className="flex justify-center items-center mb-8">
+            <div className="flex justify-center items-center mb-6 sm:mb-8">
               <div className="relative">
-                <div className="w-20 h-20 border-4 border-blue-500/30 rounded-full animate-spin-slow"></div>
+                <div className="w-16 h-16 sm:w-20 sm:h-20 border-4 border-blue-500/30 rounded-full animate-spin-slow"></div>
                 <div className="absolute inset-4 border-2 border-purple-500/50 rounded-full animate-pulse"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
               </div>
             </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {[
                 { value: "500+", label: "Aerolíneas" },
                 { value: "1M+", label: "Rutas" },
@@ -91,17 +91,17 @@ export default function HowItWorks() {
                 { value: "95%", label: "Precisión" }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
+                  <div className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1 sm:mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-gray-600 font-medium text-sm uppercase tracking-wider">
+                  <div className="text-gray-600 font-medium text-xs sm:text-sm uppercase tracking-wider">
                     {stat.label}
                   </div>
                 </div>
               ))}
             </div>
-            
-            <p className="text-gray-700 font-medium mt-8 text-lg">
+
+            <p className="text-gray-700 font-medium mt-6 sm:mt-8 text-sm sm:text-base md:text-lg px-4">
               Monitoreo continuo de precios en tiempo real para garantizar los mejores deals
             </p>
           </div>

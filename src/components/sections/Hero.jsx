@@ -42,10 +42,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen md:min-h-[85vh] flex items-center justify-center bg-gray-50">
-      
+    <section className="relative min-h-screen sm:min-h-[90vh] md:min-h-[85vh] flex items-center justify-center bg-gray-50">
+
       {/* Background Images Carrusel*/}
-      <div className="absolute inset-0 z-0 mx-4 my-8 md:mx-8 md:my-16 rounded-xl md:rounded-2xl overflow-hidden"> 
+      <div className="absolute inset-0 z-0 mx-2 my-4 sm:mx-4 sm:my-8 md:mx-8 md:my-16 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden"> 
         {/* Overlay */}
         <div className="absolute inset-0 bg-blue-50/20 z-20"></div>
         
@@ -85,74 +85,74 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-purple-100/30 z-10"></div>
         
         {/* Elementos decorativos */}
-        <div className="absolute top-10 right-10 md:top-16 md:right-16 w-40 h-40 md:w-60 md:h-60 bg-blue-200/20 rounded-full blur-2xl md:blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 md:bottom-16 md:left-16 w-48 h-48 md:w-72 md:h-72 bg-purple-200/20 rounded-full blur-2xl md:blur-3xl"></div>
+        <div className="absolute top-6 right-6 sm:top-10 sm:right-10 md:top-16 md:right-16 w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 bg-blue-200/20 rounded-full blur-xl sm:blur-2xl md:blur-3xl"></div>
+        <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 md:bottom-16 md:left-16 w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-purple-200/20 rounded-full blur-xl sm:blur-2xl md:blur-3xl"></div>
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 relative z-20 pb-8 md:pb-4 mt-12 md:mt-8">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-20 pb-6 sm:pb-8 md:pb-4 mt-16 sm:mt-12 md:mt-8">
         <div className="max-w-6xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-md border border-blue-100 rounded-full px-4 py-2 mb-8 md:mb-8 shadow-lg">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-gray-700 font-medium text-sm">IA activa • Analizando precios en tiempo real</span>
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white/80 backdrop-blur-md border border-blue-100 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-6 sm:mb-8 shadow-lg">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-gray-700 font-medium text-xs sm:text-sm">IA activa • Analizando precios en tiempo real</span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-6 md:mb-6 leading-tight drop-shadow-sm">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-5 sm:mb-6 leading-tight drop-shadow-sm px-2">
             Viaja más,
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 drop-shadow-sm mt-2 md:mt-2 pb-1 md:pb-2">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 drop-shadow-sm mt-3 sm:mt-5 pb-3 sm:pb-5 md:pb-6">
               paga menos
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-12 md:mb-12 max-w-2xl md:max-w-3xl mx-auto leading-relaxed font-medium">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 mb-8 sm:mb-10 md:mb-12 max-w-xl sm:max-w-2xl md:max-w-3xl mx-auto leading-relaxed font-medium px-4">
             Tu asistente de IA personal para encontrar las mejores ofertas de vuelos y hoteles
           </p>
 
           {/* Search Form */}
-          <div className="bg-white/90 backdrop-blur-md rounded-xl md:rounded-xl shadow-xl border border-blue-100 p-3 md:p-2 max-w-4xl mx-auto mb-12 md:mb-12">
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-2">
+          <div className="bg-white/90 backdrop-blur-md rounded-lg sm:rounded-xl shadow-xl border border-blue-100 p-2 sm:p-3 md:p-2 max-w-4xl mx-auto mb-8 sm:mb-10 md:mb-12">
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-2">
               {/* Where */}
               <div className="flex-1">
-                <div className="px-4 py-3 md:px-3 md:py-2.5 text-left cursor-pointer hover:bg-blue-50/50 rounded-lg transition-colors border border-transparent hover:border-blue-200">
-                  <div className="text-sm md:text-xs font-medium text-gray-600 mb-1">Dónde</div>
-                  <div className="text-gray-900 font-medium text-base md:text-sm">Buscar destino</div>
+                <div className="px-3 py-2.5 sm:px-4 sm:py-3 md:px-3 md:py-2.5 text-left cursor-pointer hover:bg-blue-50/50 rounded-lg transition-colors border border-transparent hover:border-blue-200">
+                  <div className="text-xs sm:text-sm md:text-xs font-medium text-gray-600 mb-0.5 sm:mb-1">Dónde</div>
+                  <div className="text-gray-900 font-medium text-sm sm:text-base md:text-sm">Buscar destino</div>
                 </div>
               </div>
 
               {/* Dates */}
               <div className="flex-1">
-                <div className="px-4 py-3 md:px-3 md:py-2.5 text-left cursor-pointer hover:bg-blue-50/50 rounded-lg transition-colors border border-transparent hover:border-blue-200">
-                  <div className="text-sm md:text-xs font-medium text-gray-600 mb-1">Fechas</div>
-                  <div className="text-gray-900 font-medium text-base md:text-sm">Agregar fechas</div>
+                <div className="px-3 py-2.5 sm:px-4 sm:py-3 md:px-3 md:py-2.5 text-left cursor-pointer hover:bg-blue-50/50 rounded-lg transition-colors border border-transparent hover:border-blue-200">
+                  <div className="text-xs sm:text-sm md:text-xs font-medium text-gray-600 mb-0.5 sm:mb-1">Fechas</div>
+                  <div className="text-gray-900 font-medium text-sm sm:text-base md:text-sm">Agregar fechas</div>
                 </div>
               </div>
 
               {/* Guests */}
               <div className="flex-1">
-                <div className="px-4 py-3 md:px-3 md:py-2.5 text-left cursor-pointer hover:bg-blue-50/50 rounded-lg transition-colors border border-transparent hover:border-blue-200">
-                  <div className="text-sm md:text-xs font-medium text-gray-600 mb-1">Viajeros</div>
-                  <div className="text-gray-900 font-medium text-base md:text-sm">2 personas</div>
+                <div className="px-3 py-2.5 sm:px-4 sm:py-3 md:px-3 md:py-2.5 text-left cursor-pointer hover:bg-blue-50/50 rounded-lg transition-colors border border-transparent hover:border-blue-200">
+                  <div className="text-xs sm:text-sm md:text-xs font-medium text-gray-600 mb-0.5 sm:mb-1">Viajeros</div>
+                  <div className="text-gray-900 font-medium text-sm sm:text-base md:text-sm">2 personas</div>
                 </div>
               </div>
 
               {/* Search Button */}
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-4 md:px-6 md:py-3 rounded-lg font-semibold text-base md:text-sm transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl mt-2 sm:mt-0">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 sm:px-6 sm:py-4 md:px-6 md:py-3 rounded-lg font-semibold text-sm sm:text-base md:text-sm transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
                 Buscar
               </button>
             </div>
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-6 max-w-6xl mx-auto mb-6 md:mb-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto mb-6 sm:mb-8 md:mb-4">
             {[
               {
                 title: "Precios precisos",
                 description: "IA que predice cuándo comprar",
                 icon: (
-                  <svg className="w-10 h-10 md:w-9 md:h-9 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-9 md:h-9 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 )
@@ -161,7 +161,7 @@ export default function Hero() {
                 title: "Ahorro garantizado",
                 description: "Hasta 40% más económico",
                 icon: (
-                  <svg className="w-10 h-10 md:w-9 md:h-9 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-9 md:h-9 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 )
@@ -170,33 +170,33 @@ export default function Hero() {
                 title: "Alertas instantáneas",
                 description: "Notificaciones en tiempo real",
                 icon: (
-                  <svg className="w-10 h-10 md:w-9 md:h-9 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-9 md:h-9 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-5 5v-5zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6l4 2" />
                   </svg>
                 )
               }
             ].map((feature, index) => (
-              <div key={index} className="bg-white/90 backdrop-blur-md border border-blue-100 rounded-xl md:rounded-lg p-6 md:p-4 text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <div className="flex justify-center mb-4 md:mb-3">
+              <div key={index} className="bg-white/90 backdrop-blur-md border border-blue-100 rounded-lg sm:rounded-xl md:rounded-lg p-4 sm:p-6 md:p-4 text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="flex justify-center mb-3 sm:mb-4 md:mb-3">
                   {feature.icon}
                 </div>
-                <h3 className="font-bold text-gray-900 mb-3 md:mb-2 text-lg md:text-base">{feature.title}</h3>
-                <p className="text-gray-700 text-sm md:text-xs font-medium leading-relaxed">{feature.description}</p>
+                <h3 className="font-bold text-gray-900 mb-2 sm:mb-3 md:mb-2 text-base sm:text-lg md:text-base">{feature.title}</h3>
+                <p className="text-gray-700 text-xs sm:text-sm md:text-xs font-medium leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
 
           {/* Trust Badge */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-3 md:gap-4 mt-8 md:mt-6">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-3 mt-6 sm:mt-8 md:mt-6 px-4">
             {/* Primer badge - usuarios */}
-            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-md px-5 py-3 md:px-4 md:py-2.5 rounded-full shadow-lg border border-blue-100 w-full sm:w-auto justify-center transform hover:scale-105 transition-transform">
-              <div className="flex -space-x-2 md:-space-x-1.5 flex-shrink-0">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/90 backdrop-blur-md px-4 py-2 sm:px-5 sm:py-3 md:px-4 md:py-2.5 rounded-full shadow-lg border border-blue-100 w-full sm:w-auto justify-center transform hover:scale-105 transition-transform">
+              <div className="flex -space-x-1.5 sm:-space-x-2 md:-space-x-1.5 flex-shrink-0">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-8 h-8 md:w-6 md:h-6 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-2 border-white shadow-sm"></div>
+                  <div key={i} className="w-6 h-6 sm:w-8 sm:h-8 md:w-6 md:h-6 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full border-2 border-white shadow-sm"></div>
                 ))}
               </div>
-              <span className="text-sm md:text-xs font-semibold text-gray-800 whitespace-nowrap">
+              <span className="text-xs sm:text-sm md:text-xs font-semibold text-gray-800 whitespace-nowrap">
                 +5,000 viajeros confían
               </span>
             </div>
@@ -205,13 +205,13 @@ export default function Hero() {
             <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
 
             {/* Segundo badge - rating */}
-            <div className="flex items-center gap-3 bg-white/90 backdrop-blur-md px-5 py-3 md:px-4 md:py-2.5 rounded-full shadow-lg border border-blue-100 w-full sm:w-auto justify-center transform hover:scale-105 transition-transform">
+            <div className="flex items-center gap-2 sm:gap-3 bg-white/90 backdrop-blur-md px-4 py-2 sm:px-5 sm:py-3 md:px-4 md:py-2.5 rounded-full shadow-lg border border-blue-100 w-full sm:w-auto justify-center transform hover:scale-105 transition-transform">
               <div className="flex flex-shrink-0">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <span key={star} className="text-yellow-500 text-lg md:text-sm">★</span> 
+                  <span key={star} className="text-yellow-500 text-base sm:text-lg md:text-sm">★</span>
                 ))}
               </div>
-              <span className="text-sm md:text-xs font-semibold text-gray-800 whitespace-nowrap">
+              <span className="text-xs sm:text-sm md:text-xs font-semibold text-gray-800 whitespace-nowrap">
                 4.9/5 Trustpilot
               </span>
             </div>
@@ -220,9 +220,9 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator*/}
-      <div className="absolute bottom-6 md:bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
-        <div className="w-6 h-10 md:w-5 md:h-8 border-2 border-gray-600 rounded-full flex justify-center backdrop-blur-sm bg-white/30">
-          <div className="w-1 h-3 md:h-2 bg-gray-600 rounded-full mt-2 md:mt-1.5"></div>
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-4 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+        <div className="w-5 h-8 sm:w-6 sm:h-10 md:w-5 md:h-8 border-2 border-gray-600 rounded-full flex justify-center backdrop-blur-sm bg-white/30">
+          <div className="w-1 h-2 sm:h-3 md:h-2 bg-gray-600 rounded-full mt-1.5 sm:mt-2 md:mt-1.5"></div>
         </div>
       </div>
     </section>
