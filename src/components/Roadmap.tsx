@@ -51,39 +51,39 @@ export default function Roadmap() {
   ];
 
   return (
-    <section className="py-20 bg-customGray">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-gray-700 font-medium text-sm">Roadmap Producto</span>
+    <section className="py-12 sm:py-16 md:py-20 bg-customGray">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-white border border-gray-200 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 mb-4 sm:mb-6">
+            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></div>
+            <span className="text-gray-700 font-medium text-xs sm:text-sm">Roadmap Producto</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Expansión futura
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Creando el ecosistema completo de viajes inteligentes
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {phases.map((item, index) => (
             <div key={index} className="group">
-              <div className={`bg-gradient-to-br ${item.color} text-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 h-full flex flex-col`}>
+              <div className={`bg-gradient-to-br ${item.color} text-white p-5 sm:p-6 rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105 h-full flex flex-col`}>
                 {/* Header con icono y fase */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="text-sm font-semibold opacity-90">{item.phase}</div>
+                <div className="flex items-center justify-between mb-3 sm:mb-4">
+                  <div className="text-xs sm:text-sm font-semibold opacity-90">{item.phase}</div>
                   <div className="text-white opacity-90">
                     {item.icon}
                   </div>
                 </div>
-                
+
                 {/* Contenido principal */}
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                  
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">{item.title}</h3>
+
                   {/* Status badge */}
-                  <div className="inline-flex items-center gap-1 bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium mb-3">
+                  <div className="inline-flex items-center gap-1 bg-white/20 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium mb-2 sm:mb-3">
                     <div className={`w-1.5 h-1.5 rounded-full ${
                       item.status === "En desarrollo" ? "bg-green-400" :
                       item.status === "Próximamente" ? "bg-yellow-400" :
@@ -91,8 +91,8 @@ export default function Roadmap() {
                     }`}></div>
                     {item.status}
                   </div>
-                  
-                  <p className="text-sm opacity-90 leading-relaxed">{item.description}</p>
+
+                  <p className="text-xs sm:text-sm opacity-90 leading-relaxed">{item.description}</p>
                 </div>
               </div>
             </div>
