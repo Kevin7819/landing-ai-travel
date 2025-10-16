@@ -21,12 +21,12 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-12 sm:py-16 md:py-20 bg-custom-gray from-slate-50 to-blue-50/30">
+    <section id="how-it-works" className="py-12 sm:py-16 md:py-20 bg-customGray">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 sm:gap-3 bg-custom-gray backdrop-blur-sm border border-blue-100 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-sm">
-            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
-            <span className="text-gray-700 font-semibold text-xs sm:text-sm tracking-wide">PROCESO INTELIGENTE</span>
+          <div className="inline-flex items-center gap-2 sm:gap-3 bg-blue-50 backdrop-blur-sm border border-blue-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-sm">
+            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
+            <span className="text-blue-700 font-semibold text-xs sm:text-sm tracking-wide">PROCESO INTELIGENTE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
             Cómo funciona
@@ -37,7 +37,7 @@ export default function HowItWorks() {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20 relative">
-          <div className="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-transparent via-blue-200 to-transparent"></div>
+          <div className="hidden md:block absolute top-12 left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-transparent via-blue-100 to-transparent"></div>
 
           {steps.map((step, index) => (
             <div key={index} className="relative group">
@@ -55,7 +55,7 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Contenido */}
-                <div className="bg-custom-gray backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border bg-custom-gray group-hover:shadow-2xl group-hover:border-blue-100 transition-all duration-500">
+                <div className="bg-white backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-gray-100 group-hover:shadow-2xl group-hover:border-blue-100 transition-all duration-500">
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-gray-900 group-hover:text-blue-600 transition-colors">
                     {step.title}
                   </h3>
@@ -69,12 +69,12 @@ export default function HowItWorks() {
         </div>
 
         {/* Stats Section */}
-        <div className="bg-custom-gray backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-center shadow-2xl border bg-custom-gray">
+        <div className="bg-gradient-to-br from-blue-50 to-purple-50 backdrop-blur-md rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 text-center shadow-2xl border border-blue-100">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center items-center mb-6 sm:mb-8">
               <div className="relative">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 border-4 border-blue-500/30 rounded-full animate-spin-slow"></div>
-                <div className="absolute inset-4 border-2 border-purple-500/50 rounded-full animate-pulse"></div>
+                <div className="w-16 h-16 sm:w-20 sm:h-20 border-4 border-blue-300 rounded-full animate-spin-slow"></div>
+                <div className="absolute inset-4 border-2 border-purple-300 rounded-full animate-pulse"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -94,7 +94,7 @@ export default function HowItWorks() {
                   <div className="text-2xl sm:text-3xl font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-1 sm:mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-gray-600 font-medium text-xs sm:text-sm uppercase tracking-wider">
+                  <div className="text-gray-700 font-medium text-xs sm:text-sm uppercase tracking-wider">
                     {stat.label}
                   </div>
                 </div>

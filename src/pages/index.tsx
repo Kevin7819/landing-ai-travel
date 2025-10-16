@@ -2,8 +2,8 @@ import Header from '../components/ui/Header';
 import Hero from '../components/sections/Hero';
 import HowItWorks from '../components/sections/HowItWorks';
 import Benefits from '../components/sections/Benefits';
-import Roadmap from '../components/Roadmap';
-import Subscription from '../components/Subscription';
+import Roadmap from '../components/sections/Roadmap';
+import Subscription from '../components/sections/Subscription';
 import Footer from '../components/ui/Footer';
 
 export default function Home() {

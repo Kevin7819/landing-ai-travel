@@ -42,7 +42,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen sm:min-h-[90vh] md:min-h-[85vh] flex items-center justify-center bg-gray-50">
+    <section className="relative min-h-screen sm:min-h-[90vh] md:min-h-[85vh] flex items-center justify-center bg-customGray">
 
       {/* Background Images Carrusel*/}
       <div className="absolute inset-0 z-0 mx-2 my-4 sm:mx-4 sm:my-8 md:mx-8 md:my-16 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden"> 
