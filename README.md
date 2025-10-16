@@ -1,40 +1,176 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# LPTrips - Landing Page
 
-## Getting Started
+Una landing page moderna y responsive para búsqueda inteligente de precios de viajes, desarrollada con Next.js y Tailwind CSS.
 
-First, run the development server:
+## Características Principales
+
+- **Diseño Mobile-First**: Optimizado para dispositivos móviles y tablets
+- **Interfaz Moderna**: Diseño limpio con efectos glassmorphism y gradientes
+- **Búsqueda Inteligente**: Formulario intuitivo para búsqueda de destinos
+- **Carousel Dinámico**: Imágenes de fondo que rotan automáticamente
+- **Totalmente Responsive**: Se adapta a todos los tamaños de pantalla
+- **Performance Optimizada**: Carga rápida con Next.js y optimizaciones de imágenes
+
+## Tecnologías Utilizadas
+
+- **Next.js**: Framework React con renderizado híbrido
+- **TypeScript**: Tipado estático para mayor robustez
+- **Tailwind CSS**: Framework CSS utility-first
+- **Responsive Design**: Breakpoints para mobile, tablet y desktop
+
+## Estructura del Proyecto
+
+```
+ia-travel-landing/
+├── pages/
+│   ├── index.tsx          # Página principal
+│   └── api/
+│       └── hello.ts       # Endpoint API de ejemplo
+├── components/
+│   └── Hero.tsx          # Componente principal hero
+├── public/
+│   └── images/           # Assets e imágenes
+├── styles/
+│   └── globals.css       # Estilos globales
+└── config/
+    └── tailwind.config.js # Configuración de Tailwind
+```
+
+## Instalación y Desarrollo
+
+### Prerrequisitos
+
+- Node.js 18.0 o superior
+- npm, yarn, pnpm o bun
+
+### Instalación
+
+1. Clona el repositorio:
+```bash
+git clone [url-del-repositorio]
+cd ia-travel-landing
+```
+
+2. Instala las dependencias:
+```bash
+npm install
+# o
+yarn install
+# o
+pnpm install
+# o
+bun install
+```
+
+3. Inicia el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Scripts Disponibles
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- `npm run dev` - Servidor de desarrollo
+- `npm run build` - Build de producción
+- `npm run start` - Servidor de producción
+- `npm run lint` - Ejecutar ESLint
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Personalización
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Colores y Tema
 
-## Learn More
+El proyecto utiliza una paleta de colores moderna que puede ser personalizada en `tailwind.config.js`:
 
-To learn more about Next.js, take a look at the following resources:
+```javascript
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        50: '#eff6ff',
+        500: '#3b82f6',
+        600: '#2563eb',
+      }
+    }
+  }
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### Contenido
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Texto Principal**: Modifica el heading en `components/Hero.tsx`
+- **Imágenes del Carousel**: Actualiza el array `imageSets` con tus propias imágenes
+- **Características**: Edita el array de features en la sección correspondiente
 
-## Deploy on Vercel
+## Responsive Design
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+El proyecto sigue un enfoque mobile-first con los siguientes breakpoints:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- **Mobile**: < 768px (estilos base)
+- **Tablet**: ≥ 768px (prefijo `md:`)
+- **Desktop**: ≥ 1024px (prefijo `lg:`)
+- **Large Desktop**: ≥ 1280px (prefijo `xl:`)
+
+## Optimizaciones Implementadas
+
+- **Lazy Loading**: Imágenes cargan bajo demanda
+- **Font Optimization**: Fuentes optimizadas con next/font
+- **Image Optimization**: Compresión y formatos modernos (WebP)
+- **Code Splitting**: Carga bajo demanda de componentes
+- **SEO Ready**: Meta tags y estructura semántica
+
+## Deployment
+
+### Vercel (Recomendado)
+
+```bash
+npm run build
+```
+
+Luego despliega en [Vercel](https://vercel.com/new) conectando tu repositorio.
+
+### Otras Plataformas
+
+El proyecto puede ser desplegado en cualquier plataforma que soporte Node.js:
+
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
+
+## Estructura de Componentes
+
+### Hero Component
+
+El componente principal incluye:
+
+- Carrusel automático de imágenes de fondo
+- Formulario de búsqueda con validación
+- Sección de características destacadas
+- Badges de confianza y ratings
+- Indicador de scroll
+
+## Contribución
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## Licencia
+
+Distribuido bajo la Licencia MIT. Ver `LICENSE` para más información.
+
+## Soporte
+
+Si encuentras algún problema o tienes preguntas:
+
+1. Revisa la documentación de [Next.js](https://nextjs.org/docs)
+2. Consulta los [issues del proyecto](https://github.com/tu-usuario/ia-travel-landing/issues)
+3. Crea un nuevo issue con una descripción detallada
+
+---
+
+Desarrollado con Next.js y Tailwind CSS

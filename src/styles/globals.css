@@ -5,25 +5,160 @@
 @layer base {
   :root {
     --custom-gray: #F6F6F6;
+    --hopper-pink: #ff7aa2;
+    --hopper-purple: #a45ee5;
+    --hopper-blue: #5ec4ff;
+    --hopper-light: #fef9ff;
+    --hopper-dark: #1c1b29;
+  }
+  
+  html {
+    @apply scroll-smooth;
   }
   
   body {
-    @apply bg-white text-gray-900 font-sans;
+    @apply bg-white text-gray-900 font-sans antialiased;
+  }
+
+  /* Mejoras de tipografía */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Botones reutilizables */
+  .btn-primary {
+    @apply bg-gradient-to-r from-hopperPink to-hopperPurple hover:from-hopperPurple hover:to-hopperBlue text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-hopperPink focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/90 backdrop-blur-md border border-hopperPink/20 text-hopperDark font-medium py-3 px-6 rounded-lg transition-all duration-200 hover:bg-hopperPink/10 hover:border-hopperPink/40 shadow-lg hover:shadow-xl;
+  }
+
+  /* Cards y containers */
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/30 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  .feature-card {
+    @apply glass-card p-6 text-center hover:scale-105;
+  }
+
+  /* Gradientes personalizados */
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--hopper-pink) 0%, var(--hopper-purple) 50%, var(--hopper-blue) 100%);
+  }
+  
+  .gradient-text {
+    background: linear-gradient(135deg, var(--hopper-pink) 0%, var(--hopper-purple) 50%, var(--hopper-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .gradient-border {
+    border: 2px solid transparent;
+    background: linear-gradient(135deg, var(--hopper-pink) 0%, var(--hopper-purple) 50%, var(--hopper-blue) 100%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
   }
 }
 
 @layer utilities {
-  .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
-  
-  .text-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
   .bg-custom-gray {
     background-color: var(--custom-gray);
+  }
+  
+  .bg-hopper-light {
+    background-color: var(--hopper-light);
+  }
+  
+  .text-hopper-dark {
+    color: var(--hopper-dark);
+  }
+
+  /* Animaciones personalizadas */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Mejoras de scroll */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--hopper-purple) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--hopper-purple);
+    border-radius: 3px;
+  }
+}
+
+/* Animaciones keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px -10px var(--hopper-pink);
+  }
+  to {
+    box-shadow: 0 0 20px -5px var(--hopper-purple);
+  }
+}
+
+/* Mejoras de accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Soporte para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --custom-gray: #2d2d2d;
+  }
+}
+
+/* Mejoras de impresión */
+@media print {
+  .glass-card {
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    color: black;
   }
 }
