@@ -9,22 +9,29 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        hopperPink: "#ff7aa2",
-        hopperPurple: "#a45ee5", 
-        hopperBlue: "#5ec4ff",
-        hopperLight: "#fef9ff",
-        hopperDark: "#1c1b29",
+        primary: {
+          blue: "#3b82f6",
+          purple: "#8b5cf6",
+        },
+        light: {
+          blue: "#dbeafe",
+          purple: "#f3e8ff",
+        },
+        dark: {
+          blue: "#1e40af", 
+          purple: "#6d28d9",
+        },
         customGray: "#F6F6F6",
       },
       gradientColorStops: {
-        hopper: ["#ff7aa2", "#a45ee5", "#5ec4ff"],
+        'blue-purple': ["#3b82f6", "#8b5cf6"],
       },
       backgroundColor: {
         'custom-gray': '#F6F6F6',
       },
       backgroundImage: {
-        'hopper-gradient': 'linear-gradient(135deg, #ff7aa2 0%, #a45ee5 50%, #5ec4ff 100%)',
-        'hopper-gradient-light': 'linear-gradient(135deg, #ff7aa220 0%, #a45ee520 50%, #5ec4ff20 100%)',
+        'blue-purple-gradient': 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+        'blue-purple-gradient-light': 'linear-gradient(135deg, #3b82f620 0%, #8b5cf620 100%)',
       },
       animation: {
         'float': 'float 3s ease-in-out infinite',
@@ -37,8 +44,8 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
         },
         glow: {
-          'from': { boxShadow: '0 0 20px -10px #ff7aa2' },
-          'to': { boxShadow: '0 0 20px -5px #a45ee5' },
+          'from': { boxShadow: '0 0 20px -10px #3b82f6' },
+          'to': { boxShadow: '0 0 20px -5px #8b5cf6' },
         }
       },
       fontFamily: {

@@ -40,14 +40,14 @@ export default function Benefits() {
   ];
 
   return (
-    <section id="benefits" className="py-12 sm:py-16 md:py-20 bg-white">
+    <section id="benefits" className="py-8 sm:py-12 md:py-16 bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 sm:gap-3 bg-blue-50 backdrop-blur-sm border border-blue-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-sm">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="inline-flex items-center gap-2 sm:gap-3 bg-blue-50 backdrop-blur-sm border border-blue-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-4 sm:mb-6 shadow-sm">
             <div className="w-2 h-2 sm:w-3 sm:h-3 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full animate-pulse"></div>
             <span className="text-blue-700 font-semibold text-xs sm:text-sm tracking-wide">VENTAJAS EXCLUSIVAS</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-3 sm:mb-4 px-4">
             Beneficios principales
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light px-4">
@@ -55,27 +55,26 @@ export default function Benefits() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-100 hover:scale-105"
+              className="group relative bg-white rounded-xl sm:rounded-2xl p-5 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-blue-100 hover:scale-105"
             >
-              {/* Efecto de fondo al hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 rounded-2xl sm:rounded-3xl group-hover:from-blue-50/50 group-hover:to-purple-50/30 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-purple-50/0 rounded-xl sm:rounded-2xl group-hover:from-blue-50/50 group-hover:to-purple-50/30 transition-all duration-500"></div>
               
               <div className="relative z-10">
-                <div className="flex justify-center mb-4 sm:mb-6">
-                  <div className="p-2 sm:p-3 bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                <div className="flex justify-center mb-3 sm:mb-4">
+                  <div className="p-2 sm:p-3 bg-gradient-to-br from-white to-gray-50 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300">
                     {benefit.icon}
                   </div>
                 </div>
                 
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-gray-900 text-center group-hover:text-blue-600 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-900 text-center group-hover:text-blue-600 transition-colors duration-300">
                   {benefit.title}
                 </h3>
                 
-                <p className="text-gray-600 text-sm sm:text-base text-center leading-relaxed font-light">
+                <p className="text-gray-600 text-sm text-center leading-relaxed font-light">
                   {benefit.description}
                 </p>
               </div>
@@ -83,17 +82,16 @@ export default function Benefits() {
           ))}
         </div>
 
-        {/* Sección adicional de confianza */}
-        <div className="mt-16 sm:mt-20 text-center">
-          <div className="inline-flex items-center gap-4 bg-gray-50 rounded-2xl px-6 sm:px-8 py-4 sm:py-6 border border-gray-200">
+        <div className="mt-12 sm:mt-16 text-center">
+          <div className="inline-flex items-center gap-4 bg-gray-50 rounded-xl px-5 sm:px-6 py-3 sm:py-4 border border-gray-200">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-gray-700 font-medium text-sm sm:text-base">Garantía de satisfacción</span>
+              <span className="text-gray-700 font-medium text-sm">Garantía de satisfacción</span>
             </div>
             <div className="h-4 w-px bg-gray-300"></div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-              <span className="text-gray-700 font-medium text-sm sm:text-base">Soporte 24/7</span>
+              <span className="text-gray-700 font-medium text-sm">Soporte 24/7</span>
             </div>
           </div>
         </div>

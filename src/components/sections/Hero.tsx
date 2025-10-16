@@ -42,14 +42,15 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen sm:min-h-[90vh] md:min-h-[85vh] flex items-center justify-center bg-customGray">
+    <section className="relative min-h-screen sm:min-h-[90vh] md:min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50">
+
 
       {/* Background Images Carrusel*/}
       <div className="absolute inset-0 z-0 mx-2 my-4 sm:mx-4 sm:my-8 md:mx-8 md:my-16 rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden"> 
         {/* Overlay */}
         <div className="absolute inset-0 bg-blue-50/20 z-20"></div>
         
-        {/* Imágenes del carrusel*/}
+        {/* Carousel Images */}
         {imageSets.map((imageSet, index) => (
           <div
             key={index}
@@ -84,7 +85,7 @@ export default function Hero() {
         
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-transparent to-purple-100/30 z-10"></div>
         
-        {/* Elementos decorativos */}
+        {/* Decorative Elements */}
         <div className="absolute top-6 right-6 sm:top-10 sm:right-10 md:top-16 md:right-16 w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 bg-blue-200/20 rounded-full blur-xl sm:blur-2xl md:blur-3xl"></div>
         <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 md:bottom-16 md:left-16 w-36 h-36 sm:w-48 sm:h-48 md:w-72 md:h-72 bg-purple-200/20 rounded-full blur-xl sm:blur-2xl md:blur-3xl"></div>
       </div>
@@ -189,7 +190,7 @@ export default function Hero() {
 
           {/* Trust Badge */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 md:gap-3 mt-6 sm:mt-8 md:mt-6 px-4">
-            {/* Primer badge - usuarios */}
+            {/* Primer badge - users */}
             <div className="flex items-center gap-2 sm:gap-3 bg-white/90 backdrop-blur-md px-4 py-2 sm:px-5 sm:py-3 md:px-4 md:py-2.5 rounded-full shadow-lg border border-blue-100 w-full sm:w-auto justify-center transform hover:scale-105 transition-transform">
               <div className="flex -space-x-1.5 sm:-space-x-2 md:-space-x-1.5 flex-shrink-0">
                 {[1, 2, 3, 4].map((i) => (
@@ -201,7 +202,7 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* Separador */}
+            {/* Separator */}
             <div className="h-6 w-px bg-gray-300 hidden sm:block"></div>
 
             {/* Segundo badge - rating */}

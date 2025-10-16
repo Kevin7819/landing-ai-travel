@@ -21,7 +21,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="py-12 sm:py-16 md:py-20 bg-customGray">
+    <section id="how-it-works" className="py-12 sm:py-16 md:py-20 bg-gradient-to-bl from-purple-50 via-white to-blue-50">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <div className="inline-flex items-center gap-2 sm:gap-3 bg-blue-50 backdrop-blur-sm border border-blue-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-sm">
@@ -42,7 +42,7 @@ export default function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="relative group">
               <div className="text-center">
-                {/* Número con icono */}
+                {/* icon number */}
                 <div className="relative mb-6 sm:mb-8">
                   <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-blue-500 via-purple-500 to-purple-600 rounded-xl sm:rounded-2xl flex items-center justify-center text-white text-2xl font-bold mx-auto shadow-xl shadow-blue-500/25 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-purple-500/30 transition-all duration-500">
                     <div className="text-center">
